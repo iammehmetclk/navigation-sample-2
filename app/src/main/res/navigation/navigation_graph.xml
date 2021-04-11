@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.navigation.sample2.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home" />
+
+    <action
+        android:id="@+id/action_global_home_fragment"
+        app:destination="@+id/home_fragment"
+        app:popUpTo="@id/home_fragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.navigation.sample2.SearchFragment"
+        android:label="Search Fragment"
+        tools:layout="@layout/fragment_search" />
+
+    <action
+        android:id="@+id/action_global_search_fragment"
+        app:destination="@+id/search_fragment"
+        app:popUpTo="@id/search_fragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/notification_fragment"
+        android:name="com.navigation.sample2.NotificationFragment"
+        android:label="Notification Fragment"
+        tools:layout="@layout/fragment_notification" />
+
+    <action
+        android:id="@+id/action_global_notification_fragment"
+        app:destination="@+id/notification_fragment"
+        app:popUpTo="@id/notification_fragment"
+        app:popUpToInclusive="true" />
+
+</navigation>
